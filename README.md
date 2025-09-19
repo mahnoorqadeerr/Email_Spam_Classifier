@@ -81,4 +81,14 @@ pip install pandas numpy scikit-learn nltk wordcloud matplotlib seaborn
 
 # Upload dataset and run all cells in the notebook
 
+## 🔮 Future Work
+- Try deep learning models like LSTM or BERT for improved performance.
+- Deploy the model using Streamlit or Flask for real-time spam detection.
+- Add cross-validation and hyperparameter tuning for better generalization.
+
+## 👩‍💻 Author
+
+**Mahnoor Qadeer**  
+Aspiring AI student passionate about NLP, ethical machine learning, and building real-world projects for global impact.
+
 
