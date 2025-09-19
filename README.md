@@ -1,52 +1,84 @@
-# Email Spam Classifier
+# 📧 Email Spam Classifier
 
-This project is a basic machine learning model that classifies emails as **spam** or **not spam** using Python and scikit-learn. It demonstrates text preprocessing, feature extraction, and binary classification using logistic regression.
+A complete machine learning project that classifies SMS messages as spam or not spam using Python, scikit-learn, and NLTK. This project includes data preprocessing, exploratory data analysis (EDA), feature extraction, model training, and evaluation using multiple classifiers.
 
-## Project Overview
+---
 
-- **Dataset**: Public spam email dataset with labeled messages
-- **Goal**: Predict whether an email is spam based on its content
-- **Accuracy Achieved**: [Insert final accuracy here, e.g., 95.2%]
+## 🎯 Project Goal
 
-## Workflow Summary
+Predict whether a message is spam based on its content using supervised learning techniques. The project compares multiple models and evaluates them using precision, recall, and F1-score for deeper insight.
 
-1. **Data Preprocessing**
-   - Removed punctuation and special characters
-   - Converted text to lowercase
-   - Removed stopwords using NLTK
+---
 
-2. **Label Mapping**
-   - Converted labels to binary format: `1 = spam`, `0 = not spam`
+## 📁 Dataset
 
-3. **Feature Extraction**
-   - Used `TfidfVectorizer` to convert email text into numerical features
+- Public SMS spam dataset with labeled messages  
+- Labels: `1 = spam`, `0 = ham (not spam)`
 
-4. **Model Training**
-   - Trained a `LogisticRegression` model using train-test split
-   - Evaluated using accuracy score and confusion matrix
+---
 
-## Results
+## 🧪 Workflow Summary
 
-- **Accuracy**: `[Insert your model’s accuracy here]`
-- **Confusion Matrix**: Visualized using Seaborn
+### 🔹 Data Preprocessing
+- Removed punctuation and special characters  
+- Converted text to lowercase  
+- Removed stopwords using NLTK  
+- Mapped labels to binary format
 
-## Technologies Used
+### 🔹 Exploratory Data Analysis (EDA)
+- Bar chart showing spam vs. non-spam distribution  
+- Word clouds for spam and ham messages  
+- Comparison of average message lengths
 
-- Python
-- Pandas, NumPy
-- scikit-learn
-- NLTK
-- Matplotlib, Seaborn
+### 🔹 Feature Extraction
+- Used `CountVectorizer` to convert text into numerical features
 
-## How to Run
+### 🔹 Model Training & Evaluation
+Trained and compared three models:
+- **Naive Bayes**
+- **Logistic Regression**
+- **Support Vector Machine (SVM)**
+
+Each model was evaluated using:
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+
+---
+
+## 📊 Results Summary
+
+| Model               | Accuracy | Precision | Recall | F1-Score |
+|--------------------|----------|-----------|--------|----------|
+| Naive Bayes        | 0.99     | 0.97      | 0.95   | 0.96     |
+| Logistic Regression| 0.99     | 1.00      | 0.89   | 0.94     |
+| SVM                | 0.99     | 1.00      | 0.89   | 0.94     |
+
+---
+
+## 🧠 Conclusion
+
+Naive Bayes achieved the highest recall, making it best for catching spam. Logistic Regression and SVM had perfect precision, minimizing false positives. This comparison highlights the importance of choosing models based on task-specific priorities.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python  
+- Pandas, NumPy  
+- scikit-learn  
+- NLTK  
+- Matplotlib, Seaborn  
+
+---
+
+## 🚀 How to Run
 
 ```bash
 # Install dependencies
-!pip install pandas numpy scikit-learn nltk
+pip install pandas numpy scikit-learn nltk wordcloud matplotlib seaborn
 
-# Upload dataset
-from google.colab import files
-uploaded = files.upload()
+# Upload dataset and run all cells in the notebook
 
-# Run all cells in the notebook
 
